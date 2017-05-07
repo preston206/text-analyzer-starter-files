@@ -27,11 +27,8 @@ function uniqueWordCount() {
         }
     }
     console.log(wordCount);
-    Object.keys(wordCount).forEach(function(key) {
-        if (key = 1) {
-            uniqueWords++;
-        }
-    })
+    uniqueWords = Object.keys(wordCount).length;
+    console.log(Object.keys(wordCount));
     $('.js-unique-count').html(uniqueWords);
 }
 
@@ -50,7 +47,7 @@ function averageWordLength() {
     $('.js-average-length').html(average + " characters");
 }
 
-$('button').click(function(event) {
+$('form').submit(function(event) {
     event.preventDefault();
     removeHiddenClass();
     totalWordCount();
